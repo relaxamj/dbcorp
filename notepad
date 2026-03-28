@@ -1,0 +1,38 @@
+Let’s create a full Node.js project with a simple HTML front-end, so you can deploy it on your GCP VM
+
+nodeapp/
+ ├── public/
+ │    └── index.html
+ ├── app.js
+ ├── package.json
+
+Install Node.js & PM2
+
+sudo apt update
+sudo apt install nodejs npm -y
+npm install -g pm2
+
+cd /project/path
+npm install
+
+Start your Node.js app with PM2
+
+pm2 start app.js --name nodeapp
+pm2 save
+pm2 startup
+
+install and configure nginx as a reverse proxy 
+sudo nano /etc/nginx/sites-available/default
+
+sudo nano /etc/nginx/sites-available/default
+
+sudo nginx -t
+sudo systemctl restart nginx
+
+/public/index.html   → frontend (UI)
+/app.js              → backend (API)
+
+Troubleshoot:
+pm2 logs nodeapp - Check Logs
+pm2 start app.js
+pm2 status

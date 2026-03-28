@@ -1,0 +1,19 @@
+const express = require('express');
+const app = express();
+
+const PORT = 80
+;
+
+// Home route
+app.get('/', (req, res) => {
+    res.send('🚀 Hello from Node.js app on GCP VM!');
+});
+
+// Test route
+app.get('/about', (req, res) => {
+    res.send('This is deployed on Google Cloud VM!');
+});
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
+});
