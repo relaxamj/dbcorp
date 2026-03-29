@@ -1,11 +1,3 @@
-Let’s create a full Node.js project with a simple HTML front-end, so you can deploy it on your GCP VM
 
-nodeapp/
- ├── public/
- │    └── index.html
- ├── app.js
- ├── package.json
-
-1️⃣ Install Node.js & PM2
 
 
