@@ -20,6 +20,7 @@ Start your Node.js app with PM2
 pm2 start app.js --name nodeapp
 pm2 save
 pm2 startup
+pm2 logs 
 
 install and configure nginx as a reverse proxy 
 sudo nano /etc/nginx/sites-available/default
